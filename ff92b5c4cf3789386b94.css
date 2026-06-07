@@ -261,18 +261,37 @@ button:disabled {
   font-weight: 800;
 }
 
-.document-preview {
-  padding: 12px;
+.preview-summary {
+  overflow: hidden;
   border-radius: 12px;
   background: var(--white);
   border: 1px solid var(--border);
 }
 
-.document-preview p {
-  margin: 5px 0;
+.preview-row {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 10px;
+  padding: 9px 11px;
+  border-bottom: 1px solid #eef2f6;
   font-size: 13px;
-  line-height: 1.45;
-  color: var(--text-main);
+  line-height: 1.35;
+}
+
+.preview-row:last-child {
+  border-bottom: none;
+}
+
+.preview-row.primary {
+  background: #f3f8fc;
+}
+
+.preview-label {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 #previewSalutation {
@@ -280,8 +299,10 @@ button:disabled {
   color: var(--brand-primary-dark);
 }
 
-.document-line {
-  display: none;
+#previewDetails,
+#previewRole,
+#previewDate {
+  color: var(--text-main);
 }
 
 
