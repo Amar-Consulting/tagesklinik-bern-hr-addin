@@ -192,13 +192,13 @@ function updatePreview() {
     salutation || fullName ? `${salutation} ${fullName}`.trim() : "Bitte Personendaten eingeben.";
 
   document.getElementById("previewDetails").textContent =
-    firstAndLastName ? `Name: ${firstAndLastName}` : "";
+    firstAndLastName || "–";
 
   document.getElementById("previewRole").textContent =
-    role ? `Bezeichnung: ${role}` : "";
+    role || "–";
 
   document.getElementById("previewDate").textContent =
-    `Datum: ${today}`;
+    today;
 }
 
 
