@@ -339,7 +339,11 @@ button:disabled {
 
 .input-with-icon input,
 .input-with-icon select {
-  padding-left: 44px;
+  padding-left: 52px;
+}
+
+.input-with-icon select {
+  padding-left: 56px;
 }
 
 .app-footer {
@@ -388,3 +392,8 @@ button:disabled {
   color: var(--text-muted);
   text-align: center;
 }
+
+.select-no-icon select {
+  padding-left: 11px;
+}
+
