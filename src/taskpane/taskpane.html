@@ -46,8 +46,21 @@
         <label for="lastName">Nachname <span class="required">*</span></label>
         <input id="lastName" type="text" placeholder="Nachname" />
 
-        <button id="createDocument" type="button">Dokument erstellen</button>
-        <button id="resetForm" class="secondary-button" type="button">Zurücksetzen</button>
+        <div class="preview-card" aria-live="polite">
+        <div class="preview-header">
+            <span>Vorschau</span>
+        </div>
+
+        <div class="preview-content">
+            <p id="previewSalutation">Bitte Personendaten eingeben.</p>
+            <p id="previewDetails"></p>
+            <p id="previewRole"></p>
+            <p id="previewDate"></p>
+        </div>
+        </div>
+
+<button id="createDocument" type="button">Dokument erstellen</button>
+<button id="resetForm" class="secondary-button" type="button">Zurücksetzen</button>
 
         <p class="form-note">Pflichtfelder sind mit <span class="required">*</span> gekennzeichnet.</p>
         </section>

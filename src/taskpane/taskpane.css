@@ -227,3 +227,32 @@ button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+.preview-card {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--brand-accent);
+  border: 1px solid #cfe1ef;
+}
+
+.preview-header {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.preview-content p {
+  margin: 4px 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-main);
+}
+
+#previewSalutation {
+  font-weight: 700;
+}
+

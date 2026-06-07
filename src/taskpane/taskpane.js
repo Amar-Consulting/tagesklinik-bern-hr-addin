@@ -2,6 +2,13 @@ Office.onReady((info) => {
   if (info.host === Office.HostType.Word) {
     document.getElementById("createDocument").onclick = createDocument;
     document.getElementById("resetForm").onclick = resetForm;
+
+    ["gender", "title", "firstName", "lastName"].forEach((fieldId) => {
+      document.getElementById(fieldId).addEventListener("input", updatePreview);
+      document.getElementById(fieldId).addEventListener("change", updatePreview);
+    });
+
+    updatePreview();
   }
 });
 
@@ -137,6 +144,8 @@ function resetForm() {
   const button = document.getElementById("createDocument");
   button.textContent = "Dokument erstellen";
   button.disabled = false;
+
+  updatePreview();
 }
 
 
@@ -159,4 +168,37 @@ async function replaceInRange(range, placeholder, value) {
 
   return count;
 }
+
+function updatePreview() {
+  const gender = document.getElementById("gender").value;
+  const title = document.getElementById("title").value.trim();
+  const firstName = document.getElementById("firstName").value.trim();
+  const lastName = document.getElementById("lastName").value.trim();
+
+  const today = new Date().toLocaleDateString("de-CH", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  });
+
+  const salutation = gender === "frau" ? "Liebe Frau" : gender === "mann" ? "Lieber Herr" : "";
+  const role = gender === "frau" ? "Belegärztin" : gender === "mann" ? "Belegarzt" : "";
+
+  const formattedTitle = title ? `${title} ` : "";
+  const fullName = `${formattedTitle}${lastName}`.trim();
+  const firstAndLastName = `${firstName} ${lastName}`.trim();
+
+  document.getElementById("previewSalutation").textContent =
+    salutation || fullName ? `${salutation} ${fullName}`.trim() : "Bitte Personendaten eingeben.";
+
+  document.getElementById("previewDetails").textContent =
+    firstAndLastName ? `Name: ${firstAndLastName}` : "";
+
+  document.getElementById("previewRole").textContent =
+    role ? `Bezeichnung: ${role}` : "";
+
+  document.getElementById("previewDate").textContent =
+    `Datum: ${today}`;
+}
+
 
