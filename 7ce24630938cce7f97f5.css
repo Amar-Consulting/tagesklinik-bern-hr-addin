@@ -397,3 +397,6 @@ button:disabled {
   padding-left: 11px;
 }
 
+.input-with-icon select {
+  padding-left: 11px;
+}
