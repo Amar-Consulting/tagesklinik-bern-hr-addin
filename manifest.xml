@@ -16,7 +16,7 @@
     <Host Name="Document"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://amar-consulting.github.io/tagesklinik-bern-hr-addin/taskpane.html"/>
+    <SourceLocation DefaultValue="https://amar-consulting.github.io/tagesklinik-bern-hr-addin/taskpane.html?v=preview1"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -69,7 +69,7 @@
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
         <bt:Url id="Commands.Url" DefaultValue="https://amar-consulting.github.io/tagesklinik-bern-hr-addin/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://amar-consulting.github.io/tagesklinik-bern-hr-addin/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://amar-consulting.github.io/tagesklinik-bern-hr-addin/taskpane.html?v=preview1"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>

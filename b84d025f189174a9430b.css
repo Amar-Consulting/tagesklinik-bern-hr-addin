@@ -256,3 +256,61 @@ button:disabled {
   font-weight: 700;
 }
 
+.form-field {
+  margin-top: 14px;
+}
+
+.form-field:first-of-type {
+  margin-top: 0;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 8px;
+  background: var(--brand-accent);
+  color: var(--brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.input-with-icon input,
+.input-with-icon select {
+  padding-left: 44px;
+}
+
+.app-footer {
+  margin-top: 18px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.footer-dot {
+  color: var(--border);
+}
+
+
