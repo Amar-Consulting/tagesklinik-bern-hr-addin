@@ -232,29 +232,58 @@ button:disabled {
   margin-top: 16px;
   padding: 14px;
   border-radius: 14px;
-  background: var(--brand-accent);
-  border: 1px solid #cfe1ef;
+  background: #f8fbfd;
+  border: 1px solid #d9e8f2;
 }
 
 .preview-header {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.preview-header span:first-child {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--brand-primary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
-.preview-content p {
-  margin: 4px 0;
+.preview-badge {
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: #e6f2f8;
+  color: var(--brand-primary);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.document-preview {
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.document-preview p {
+  margin: 5px 0;
   font-size: 13px;
-  line-height: 1.4;
+  line-height: 1.45;
   color: var(--text-main);
 }
 
 #previewSalutation {
-  font-weight: 700;
+  font-weight: 800;
+  color: var(--brand-primary-dark);
 }
+
+.document-line {
+  display: none;
+}
+
 
 .form-field {
   margin-top: 14px;
